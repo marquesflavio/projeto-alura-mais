@@ -97,7 +97,44 @@ body{
 .dispositivos{
     text-align: center;
 }
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+    
+}
 .dispositos__lista{
     display: flex;
     justify-content: center;
+    list-style-type: none; /*tirar os pontinhas da lista*/
+    margin: 5em 0;
+}
+.lista__item{
+    font-size: 32px;
+    
+}
+
+/*Rodapé*/
+.rodape{
+    text-align: center;
+    
+}
+.rodape__logo{
+    margin: 5em 0 3em 0;
+}
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.lista__link > a{
+    text-decoration: none;
+    margin: 0 1em;
+    color: var(--branco-principal);
+
+}
+.rodape__texto{
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin: 3em 3.5em;
+
 }
