@@ -24,15 +24,23 @@ body{
     background-image: url('imagens/Background.png');
     background-repeat: no-repeat;
     background-size: contain; /*tamanho do conteúdo do container*/
+    align-items: center; /*Como está no display grid, ele alinha todos os itens ao centro da coluna*/
+    text-align: center;
 }
 .container{
     height: 100vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: grid; /*melhor para trabalhar com o formato do site*/
+    grid-template-columns: 50% 50%; /*a composição do site pronto é de duas colunas, visualmente, por isso essa atribuição*/
+}
+.container__caixa{
+    margin: 0 6em;
 }
 .container__titulo{
     font-size: 28px;
     font-weight: 700;
+}
+.container__imagem{
+    margin: 1em 0 2em 0;
 }
 .container__botao{ /*é um <a> por conta da sua função, não executa nenhuma function*/
     background-color: var(--botao-azul);
@@ -41,6 +49,7 @@ body{
     color: var(--branco-principal);
     display: block;
     text-decoration: none;
+    margin-bottom: 1em;
 
 }
 .botao_secundario{ /*é um <a> por conta da sua função, não executa nenhuma function*/
@@ -52,4 +61,43 @@ body{
 .container__aviso{
     font-size: 12px;
     color: var(--cinza-secundario);
+}
+
+/*SEGUNDA PARTE DO SITE*/
+
+.secundario__imagem{
+    width: 80%; /*a definição do width com % é para ficar responsivo*/
+}
+
+.secundario{
+    align-items: center; /*como a section tem o display grid, da class container, o align itens é propriedade de alinhamento desse display*/
+    margin: 0 10em;
+}
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: white;
+    margin-bottom: 0.1em;
+    text-indent: 5px;
+
+}
+.container__descricao{
+    padding: 2em;
+}
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+    display: inline-block; /*para o botao ocupar só o tamanho dele. E o block faz a quebra de linha, permitindo além disso usar largura e altura, se quiser.*/
+    margin-top: 1em;
+}
+
+/*Seção dos dispositivos*/
+.dispositivos{
+    text-align: center;
+}
+.dispositos__lista{
+    display: flex;
+    justify-content: center;
 }
